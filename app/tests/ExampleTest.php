@@ -22,9 +22,11 @@ class ExampleTest extends TestCase {
 	 */
 	public function testBruno()
 	{
-		$crawler = $this->client->request('GET', '/bruno');
-		$this->assertResponseStatus(404);
-		//$this->assertTrue($this->client->getResponse()->isOk() != true);
+		$crawler = $this->client->request('GET', '/');
+		
+		$this->assertTrue($this->client->getResponse()->isOk());
+		
+		$this->assertCount(1, $crawler->filter('h1:contains("You have arrived.")'));
 
 	}
 }
