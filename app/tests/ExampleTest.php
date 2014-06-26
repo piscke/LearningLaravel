@@ -14,4 +14,17 @@ class ExampleTest extends TestCase {
 		$this->assertTrue($this->client->getResponse()->isOk());
 
 	}
+	
+	/**
+	 * Teste do Bruno
+	 *
+	 * @return void
+	 */
+	public function testBruno()
+	{
+		$crawler = $this->client->request('GET', '/bruno');
+
+		$this->assertTrue($this->client->getResponse()->isOk() != true);
+
+	}
 }
