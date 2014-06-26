@@ -23,8 +23,8 @@ class ExampleTest extends TestCase {
 	public function testBruno()
 	{
 		$crawler = $this->client->request('GET', '/bruno');
-
-		$this->assertTrue($this->client->getResponse()->isOk() != true);
+		$this->assertResponseStatus(404);
+		//$this->assertTrue($this->client->getResponse()->isOk() != true);
 
 	}
 }
