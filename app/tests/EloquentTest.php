@@ -3,7 +3,7 @@
 use Illuminate\Database;
 use Illuminate\Database\Schema\Blueprint;
 
-class PaisTest extends TestCase {
+class EloquentTest extends TestCase {
     public function setUp()
     {
         parent::setUp();
@@ -12,15 +12,18 @@ class PaisTest extends TestCase {
         {
             $table->increments('id');
             $table->string('nome');
+            $table->integer('pontos');
             $table->timestamps();
         });
 
         $pais = new Pais();
         $pais->nome = 'Brasil';
+        $pais->pontos = 10;
         $pais->save();
 
         $pais = new Pais();
         $pais->nome = 'Argentina';
+        $pais->pontos = 8;
         $pais->save();
     }
 
@@ -36,6 +39,18 @@ class PaisTest extends TestCase {
         $this->assertTrue($argentina->nome == 'Argentina');
     }
 
+    public function testa_count()
+    {
+        $this->assertTrue(Pais::count() == 2);
+    }
+
+    /**
+     * @expectedException Illuminate\Database\Eloquent\ModelNotFoundException
+     */
+    public function testa_findOrFail()
+    {
+        $model = Pais::findOrFail(10);
+    }
 
     public function tearDown() {
         parent::tearDown();
