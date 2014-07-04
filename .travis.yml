@@ -2,11 +2,6 @@ language: php
 
 php:
   - 5.4
-  
-notifications:
-  email:
-    - bugotech@gmail.com
-    - piscke@gmail.com
 
 before_script:
   - travis_retry composer self-update

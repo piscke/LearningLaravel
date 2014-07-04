@@ -44,6 +44,11 @@ class EloquentTest extends TestCase {
         $this->assertTrue(Pais::count() == 2);
     }
 
+    public function testa_count_sqlite_arquivo()
+    {
+        $this->assertTrue(Pais::on('test-file')->count() == 2);
+    }
+
     /**
      * @expectedException Illuminate\Database\Eloquent\ModelNotFoundException
      */

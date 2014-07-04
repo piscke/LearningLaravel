@@ -52,6 +52,12 @@ return array(
             'prefix'   => '',
         ),
 
+        'test-file' => array(
+            'driver'   => 'sqlite',
+            'database' => __DIR__.'/../database/tests.sqlite',
+            'prefix'   => '',
+        ),
+
         'sqlite' => array(
 			'driver'   => 'sqlite',
 			'database' => __DIR__.'/../database/production.sqlite',
