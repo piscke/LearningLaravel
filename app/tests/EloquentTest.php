@@ -46,7 +46,7 @@ class EloquentTest extends TestCase {
 
     public function testa_count_sqlite_arquivo()
     {
-        $this->assertTrue(Pais::on('test-file')->count() == 2);
+        $this->assertTrue(Pais::on('test-file')->count() == 4);
     }
 
     /**

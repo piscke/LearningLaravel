@@ -54,7 +54,7 @@ return array(
 
         'test-file' => array(
             'driver'   => 'sqlite',
-            'database' => __DIR__.'/../database/tests.sqlite',
+            'database' => __DIR__.'/../database/tests.s3db',
             'prefix'   => '',
         ),
 
