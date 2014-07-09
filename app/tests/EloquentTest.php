@@ -20,8 +20,8 @@ class EloquentTest extends TestCase {
         {
             $table->increments('id');
             $table->string('nome');
-            $table->integer('pais');
-            $table->foreign('pais')->references('id')->on('paises');
+            $table->integer('pais_id');
+            $table->foreign('pais_id')->references('id')->on('paises');
             $table->timestamps();
         });
 
@@ -38,12 +38,12 @@ class EloquentTest extends TestCase {
 
         $estado = new Estado();
         $estado->nome = 'Santa Catarina';
-        $estado->pais = $brasil->id;
+        $estado->pais_id = $brasil->id;
         $estado->save();
 
         $estado = new Estado();
         $estado->nome = 'Paraná';
-        $estado->pais = $brasil->id;
+        $estado->pais_id = $brasil->id;
         $estado->save();
 
     }
@@ -93,7 +93,7 @@ class EloquentTest extends TestCase {
     public function testa_santa_catarina_pertence_ao_brasil()
     {
         $santacatarina = Estado::where('nome', '=', 'Santa Catarina')->first();
-        $this->assertTrue($santacatarina->pais()->first()->nome == "Brasil");
+        $this->assertTrue($santacatarina->pais->nome == "Brasil");
     }
 
     public function tearDown() {

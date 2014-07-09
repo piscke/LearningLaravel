@@ -11,6 +11,6 @@ class Estado extends Eloquent  {
 
     public function pais()
     {
-        return $this->belongsTo('Pais', 'pais');
+        return $this->belongsTo('Pais');
     }
 } 

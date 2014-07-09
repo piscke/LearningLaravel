@@ -11,6 +11,6 @@ class Pais extends Eloquent  {
 
     public function estados()
     {
-        return $this->hasMany('Estado', 'pais');
+        return $this->hasMany('Estado');
     }
 } 
