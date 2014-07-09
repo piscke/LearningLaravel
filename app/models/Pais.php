@@ -9,4 +9,8 @@
 class Pais extends Eloquent  {
     protected $table = 'paises';
 
+    public function estados()
+    {
+        return $this->hasMany('Estado', 'pais');
+    }
 } 
