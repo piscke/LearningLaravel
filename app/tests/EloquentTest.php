@@ -8,44 +8,9 @@ class EloquentTest extends TestCase {
     {
         parent::setUp();
 
-        Schema::create('paises', function(Blueprint $table)
-        {
-            $table->increments('id');
-            $table->string('nome');
-            $table->integer('pontos');
-            $table->timestamps();
-        });
+        Artisan::call('migrate');
 
-        Schema::create('estados', function(Blueprint $table)
-        {
-            $table->increments('id');
-            $table->string('nome');
-            $table->integer('pais_id');
-            $table->foreign('pais_id')->references('id')->on('paises');
-            $table->timestamps();
-        });
-
-
-        $brasil = new Pais();
-        $brasil->nome = 'Brasil';
-        $brasil->pontos = 10;
-        $brasil->save();
-
-        $argentina = new Pais();
-        $argentina->nome = 'Argentina';
-        $argentina->pontos = 8;
-        $argentina->save();
-
-        $estado = new Estado();
-        $estado->nome = 'Santa Catarina';
-        $estado->pais_id = $brasil->id;
-        $estado->save();
-
-        $estado = new Estado();
-        $estado->nome = 'Paraná';
-        $estado->pais_id = $brasil->id;
-        $estado->save();
-
+        $this->seed('PaisesEstadosSeeder');
     }
 
     public function testa_se_brasil_exite()
@@ -99,6 +64,6 @@ class EloquentTest extends TestCase {
     public function tearDown() {
         parent::tearDown();
 
-        Schema::drop("paises");
+        Artisan::call('migrate', ['reset']);
     }
 }
