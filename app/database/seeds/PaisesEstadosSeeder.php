@@ -10,6 +10,7 @@ class PaisesEstadosSeeder extends Seeder{
 
     public function run()
     {
+        DB::table('estados')->delete();
         DB::table('paises')->delete();
 
         $brasil = new Pais();
@@ -21,8 +22,6 @@ class PaisesEstadosSeeder extends Seeder{
         $argentina->nome = 'Argentina';
         $argentina->pontos = 8;
         $argentina->save();
-
-        DB::table('estados')->delete();
 
         $estado = new Estado();
         $estado->nome = 'Santa Catarina';

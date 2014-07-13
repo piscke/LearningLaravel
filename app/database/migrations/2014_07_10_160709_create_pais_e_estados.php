@@ -24,7 +24,7 @@ class CreatePaisEEstados extends Migration {
         {
             $table->increments('id');
             $table->string('nome');
-            $table->integer('pais_id');
+            $table->integer('pais_id')->unsigned();
             $table->foreign('pais_id')->references('id')->on('paises');
             $table->timestamps();
         });
