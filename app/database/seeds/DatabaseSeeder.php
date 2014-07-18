@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder {
 		Eloquent::unguard();
 
 		$this->call('PaisesEstadosSeeder');
-        $this->call('UsuariosSeeder');
+        $this->call('UsersSeeder');
 	}
 
 }

@@ -16,6 +16,17 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+/**
+ * usuarios
+ */
+Route::group(array('prefix' => 'users'), function ()
+{
+    Route::get('',               'UserController@index');
+    Route::get('{id}',           'UserController@get');
 
-Route::get('user/{id}', 'UserController@get');
+    Route::post('',              'UserController@post');
+    Route::put('{id}',           'UserController@put');
+
+    Route::delete('{id}',        'UserController@delete');
+});
 

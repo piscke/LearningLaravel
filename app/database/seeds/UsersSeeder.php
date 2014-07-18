@@ -6,7 +6,7 @@
  * Time: 13:09
  */
 
-class UsuariosSeeder extends Seeder{
+class UsersSeeder extends Seeder{
 
     public function run()
     {
