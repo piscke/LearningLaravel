@@ -39,7 +39,9 @@ class ControllerTest extends TestCase {
 
     public function test_users_se_retorna_json()
     {
-        $response = $this->action('GET', 'UserController@index', null, array('Accept' => 'application/json'));
+        $response = $this->action('GET', 'UserController@index', array(), array(), array(), array('HTTP_Accept' => 'application/json'));
+
+        $this->assertResponseStatus(200);
 
         $this->assertEquals('application/json', $response->headers->get('Content-Type'));
     }
