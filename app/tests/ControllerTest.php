@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Input;
+
 class ControllerTest extends TestCase {
 
     public function setUp()
@@ -17,7 +19,6 @@ class ControllerTest extends TestCase {
 
 		$this->assertTrue($this->client->getResponse()->isOk());
 	}
-
 
     public function test_users_count()
     {
@@ -46,11 +47,9 @@ class ControllerTest extends TestCase {
         $this->assertEquals('application/json', $response->headers->get('Content-Type'));
     }
 
-
     public function tearDown() {
         parent::tearDown();
 
         Artisan::call('migrate', ['reset']);
     }
-
 }

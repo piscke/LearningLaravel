@@ -16,17 +16,26 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+
+/**
+ * Usuarios
+ */
+Route::get('users', 'UserController@index');
+Route::get('users/{id}', 'UserController@get');
+Route::post('users', 'UserController@post');
+Route::put('users/{id}', 'UserController@put');
+Route::delete('users/{id}', 'UserController@delete');
+
 /**
  * usuarios
- */
 Route::group(array('prefix' => 'users'), function ()
 {
     Route::get('',               'UserController@index');
     Route::get('{id}',           'UserController@get');
-
     Route::post('',              'UserController@post');
     Route::put('{id}',           'UserController@put');
-
     Route::delete('{id}',        'UserController@delete');
 });
+ */
+
 

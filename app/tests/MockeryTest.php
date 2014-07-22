@@ -2,11 +2,6 @@
 
 class MockeryTest extends TestCase {
 
-	/**
-	 * A basic functional test example.
-	 *
-	 * @return void
-	 */
     public function testa_somar_memoria_mockery()
     {
         Calculadora::shouldReceive('somarMemoria')->once()->andReturn(4);
@@ -22,5 +17,4 @@ class MockeryTest extends TestCase {
         $this->assertEquals(10, Calculadora::somarMemoria());
         $this->assertEquals(22, Calculadora::somarMemoria());
     }
-
 }
