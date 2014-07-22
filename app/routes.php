@@ -16,6 +16,10 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+Route::get('tec', function()
+{
+    return 'Ola tecnologia!';
+});
 
 /**
  * Usuarios

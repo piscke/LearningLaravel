@@ -34,6 +34,6 @@ class EloquentSqliteFileTest extends Illuminate\Foundation\Testing\TestCase {
 
     public function testa_count_sqlite_arquivo()
     {
-        $this->assertTrue(Pais::count() == 4);
+        $this->assertTrue(Pais::count() == 5);
     }
 }
