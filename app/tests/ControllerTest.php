@@ -38,6 +38,7 @@ class ControllerTest extends TestCase {
         $this->assertEquals('Leandro Salvatti Piscke', $view['user']->name);
     }
 
+
     public function test_users_se_retorna_json()
     {
         $response = $this->action('GET', 'UserController@index', array(), array(), array(), array('HTTP_Accept' => 'application/json'));
