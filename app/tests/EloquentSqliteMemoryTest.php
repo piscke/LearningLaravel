@@ -3,7 +3,7 @@
 use Illuminate\Database;
 use Illuminate\Database\Schema\Blueprint;
 
-class EloquentTest extends TestCase {
+class EloquentSqliteMemoryTest extends TestCase {
     public function setUp()
     {
         parent::setUp();
@@ -28,11 +28,6 @@ class EloquentTest extends TestCase {
     public function testa_count()
     {
         $this->assertTrue(Pais::count() == 2);
-    }
-
-    public function testa_count_sqlite_arquivo()
-    {
-        $this->assertTrue(Pais::on('test-file')->count() == 4);
     }
 
     /**
