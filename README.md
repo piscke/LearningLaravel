@@ -6,14 +6,14 @@ Laravel visa tornar o processo de desenvolvimento agradável para o desenvolvedo
 
 Laravel é acessível, mas poderoso, oferecendo ferramentas necessárias para contruir aplicações robustas. Um ótimo container de inversão de controle, sistema de migração e suporte de testes de unidade totalmente integrado. Dando as ferramentas certas para construir qualquer aplicativo.
 
-## Documentação oficial
+### Documentação oficial
 
 [Laravel website](http://laravel.com/docs).
 
 ### Repositórios github
 
-[laravel/framework](http://github.com/laravel/framework) repository.**
+[laravel/framework](http://github.com/laravel/framework).
 
 ### Criador do Laravel
 
-[Creator of Laravel](http://taylorotwell.com).
+[Criador do Laravel](http://taylorotwell.com).
