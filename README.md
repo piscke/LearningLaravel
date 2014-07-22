@@ -8,10 +8,8 @@ Laravel é acessível, mas poderoso, oferecendo ferramentas necessárias para co
 
 ### Links
 
-[Laravel website](http://laravel.com/docs).
-
-[Github laravel/framework](http://github.com/laravel/framework).
-
-[Criador do Laravel](http://taylorotwell.com).
-
-[Google trends](http://www.google.com/trends/explore#q=laravel).
+[Laravel website](http://laravel.com/docs)
+[Github laravel/framework](http://github.com/laravel/framework)
+[Criador do Laravel](http://taylorotwell.com)
+[Google trends](http://www.google.com/trends/explore#q=laravel)
+[Integração continua do LearningLaravel](https://travis-ci.org/piscke/LearningLaravel)
